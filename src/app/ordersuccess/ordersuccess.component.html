@@ -1,0 +1,104 @@
+<app-header1></app-header1>
+<body>
+    <div class="maincontainer" *ngFor="let information of productinfo">
+        <div class="ordersuccesscontainer">
+            <h3>Order Details</h3>
+            <div class="orderinfocont">
+                <div class="orderdetails">
+                    <div class="orderiddetails">
+                        <label >Order ID:</label><label class="oidvalue" >{{orderID}}</label>
+                    </div> 
+                    <div class="orderiddetails">
+                        <label >Seller:</label><label class="oidsellerv" >{{information.Seller}}{{information.Publisher}}</label>
+                    </div> 
+                    <div class="orderiddetails">
+                        <label >Order Date:</label><label class="oidsate">{{today|date:'medium'}}</label>
+                    </div> 
+                    <div class="orderiddetail">
+                        <label >Amount Paid:</label><label class="oidamountv"><strong style="color:green;font-size: 22px;">{{ordered11[0].Total|currency:"INR"}}</strong>  Through Cash on Delivery</label>
+                    </div> 
+
+                </div>
+            
+                <div class="deliveryadress">
+                    <label ><strong>Sri Krishna</strong></label><label class="delverymobno" >9972384946</label><br>
+                    <label >Pedda nagurlu village Polanayakanahalli post Bagepalli Taluk Chikkaballapur Dist Karnataka State</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="manage">
+            <div class="managehead">
+                <p style="color:#777"><strong>MANAGE ORDER</strong></p>
+            </div>
+            <div class="mngorder">
+                <div class="print">
+                    <em class="fa-solid fa-print"></em><br>
+                    <p><b>PRINT ORDER</b></p>
+                </div>
+                <hr class="secondhr">
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <p><b>CONTACT</b></p>
+                </div>
+
+            </div>
+        </div>
+        <div class="productcontainer">
+            <div class="productstatus">
+                <p style="color:#777;font-size: 16px;"><strong>PRODUCT DETAILS</strong></p>
+                <p style="color:#777;margin-left: 205px;"><strong>APPROVAL</strong></p>
+                <p style="color:#777;margin-left: 15px;"><strong>PROCESSING</strong></p>
+                <p style="color:#777;margin-left: 15px;"><strong>SHIPPING</strong></p>
+                <p style="color:#777;margin-left: 15px;"><strong>DELIVERY</strong></p>
+                <p style="color:#777;margin-left: 50px;"><strong>SUB TOTAL</strong></p>
+            </div>
+            <div class="productinfo">
+                <div class="imagendinfo">
+                    <div class="proddescription">
+                        <img src="{{information.Image}}" alt="trimmerimage"width="100px" height="120px">
+                              
+                    </div> 
+                                      
+                </div>
+                <div class="deliverylocation">
+                    <div *ngIf="approval" class="approval">
+                        <em class="fa-solid fa-check right"></em>
+                    </div>
+                    <div *ngIf="process" class="process">
+                        <em class="fa-solid fa-arrows-spin"></em>
+
+                    </div>
+                    <div *ngIf="shipping" class="shipping">
+                        <em class="fa-solid fa-truck"></em>
+                    </div>
+                    <div *ngIf="delivery" class="delivery">
+                        <div class="date">
+                          Delivered By:{{selectdate|date}}
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+                <div class="totalamount" style="color:green;font-size: 22px;"><strong>{{ordered11[0].Total|currency:"INR"}}</strong></div>
+
+            </div>
+            <div class="proddetails">
+                <h4>{{information.Name}}</h4>
+                <label >{{information.Color}}</label><br> 
+                <p><label><strong>Quantity:</strong></label><label style="margin-left: 10px;"><strong>{{ordered11[1].Quantity}}</strong></label></p>
+            </div> 
+            <div class="demo">
+                <select [(ngModel)]="rangeselect" name="select" id="select">
+                    <option value="50">Processing</option>
+                    <option value="100">Shipping</option>
+                    
+    
+                </select>
+                <button type="button" class=" check" (click)="selceting()">check</button>
+                <button type="button" class="btn btn-primary prodreview">REVIEW PRODUCT</button>
+            </div>
+        </div>
+    </div>
+</body>

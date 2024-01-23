@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "calendar": [
+    {
+      "myform": {
+        "slctintr": "Jyothi",
+        "date": "2023-08-27",
+        "time": "17:30",
+        "onlineoffline": "Offline",
+        "modeofInterview": "",
+        "link": "",
+        "venue": "chennai"
+      },
+      "sele": [
+        {
+          "id": 2,
+          "name": "Sathish",
+          "experience": "3.7 years",
+          "salary": 1000000,
+          "worklocation": "Hyderabad",
+          "expectedSalary": 10000000,
+          "current": "switching  different job",
+          "previousJob": "Software Engineer",
+          "education": "Mcom",
+          "keySkills": "HTML, CSS, JavaScript, Angular,Wavemaker",
+          "preflocation": "Hyderabad",
+          "availability": "within a day",
+          "email": "sathipandu2342@gmail.com",
+          "profile": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "mobile": "9783474646",
+          "location": "guntur",
+          "position": "Software Engineer",
+          "dateofposting": "3-Aug-2023"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "myform": {
+        "slctintr": "Divya",
+        "date": "2023-08-19",
+        "time": "11:15",
+        "onlineoffline": "Online",
+        "modeofInterview": "Zoommeetings",
+        "link": "https://www.Microsoft teams.com",
+        "venue": ""
+      },
+      "sele": [
+        {
+          "id": 1,
+          "name": "Pallavi sai",
+          "experience": "2.6 years",
+          "salary": 700000,
+          "worklocation": "Bangalore",
+          "expectedSalary": 1000000,
+          "current": "Searching for Job",
+          "previousJob": "Software Engineer",
+          "education": "MCA",
+          "keySkills": "HTML, CSS, JavaScript, Angular",
+          "preflocation": "Bangalore",
+          "availability": "within a month",
+          "email": "Pallavi32342@gmail.com",
+          "profile": "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "mobile": "9877676567",
+          "location": "Chickaballapur",
+          "position": "Software Engineer",
+          "dateofposting": "1-Aug-2023"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

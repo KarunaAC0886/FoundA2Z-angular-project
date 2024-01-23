@@ -1,0 +1,214 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: rgb(241, 242, 244);
+    position:relative;
+}
+
+.itemslistcontiner{
+   margin:0px 10px;
+    width:98%;
+    display: flex;
+    padding-left: 35px;
+    background-color: #fff;
+}
+.itemcontiner1{
+    width: 300px;
+    /* height: 300px; */
+    text-align: center;
+    /* height:350px; */
+    margin:20px 5px 10px 25px;
+    padding:10px 10px 0px 10px;
+    align-items: center;
+    border:1px solid rgb(232, 230, 230);
+}
+.d-block{
+    margin-bottom: 10px;
+}
+.mainactions{
+    display: flex;
+    
+}
+.addtocart{
+    margin-left: 27px;
+    font-size:14px;
+}
+.buynow{
+    margin-left: 11px;
+    font-size: 14px;
+    margin-right: 6px;
+}
+.actions{
+    width:142px;
+    
+}
+.imgcontner{
+    /* width:36%;
+    height: 380px; */
+    width: 30%;
+    height: 250px;
+    margin:0px 5px 10px 0px;
+    padding:10px 10px 0px 10px;
+}
+.infocontainer{
+    width:63%;
+    height:auto;
+    border:1px solid rgb(224, 224, 224);
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.pathbtn{
+    border:none;
+    background-color: #fff;
+    color:#777;
+    font-size: 14px;
+}
+.sharecontainer{
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.share{
+font-size: 14px;
+margin-right: 20px;
+}
+.fa-share{
+    margin-right: 5px;
+    font-size: 14px;
+}
+.itemname{
+    width:100%;
+    height:auto;
+    margin-top: 15px;
+}
+.specialprice{
+    margin-top: 40px;
+    color:green;
+    font-size: 14px;
+}
+.oldprice{
+    margin-left: 40px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+.pricecont{
+    display: flex;
+    margin-top: -15px;
+    font-size: 14px;
+}
+.discountprice{
+    margin-left: 20px;
+    margin-top: 10px;
+    color:green;
+    font-size: 14px;
+}
+.seller{
+    display: flex;
+    margin-top: 15px;
+    color:#555;
+    font-size: 14px;
+}
+.Publisher{
+    margin-left: 85px;
+    color:#2874f0;
+    font-size: 14px;
+}
+.deliverycontainer{
+    display: flex;
+}
+.delivedetails{
+    display:flex;
+    margin-left: 90px;
+    margin-top: -23px;
+    width:185px;
+    font-size: 14px;
+    border-bottom: 2px solid #2874f0;
+}
+
+.dot{
+    margin-top: 25px;
+    font-size: 14px;
+    color:#2874f0;
+}
+.pincode{
+    width:165px;
+    height:auto;
+    margin-left: 10px;
+    margin-top: 18px;
+    font-size: 14px;
+    border:none;
+}
+.pincode:focus{
+    outline:none;
+}
+.check{
+    margin-top: 17px;
+    margin-left: 10px;
+    padding: 0px;
+    font-size: 14px;
+    color:#2874f0;
+    border: none;
+}
+.pinverify{
+    height:40px;
+    width:200px;
+    font-size: 14px;
+    margin-left: 140px;
+}
+.description{
+    display:flex;
+}
+.lightheading{
+color:#777;
+}
+.descriptioninfo{
+    height:auto;
+    width:450px;
+    font-size: 14px;
+    margin-left: 64px;
+}
+.specule{
+    border:1px solid #e5e3e3;
+    margin: 50px 1px 15px -14px;
+    padding-left: 15px;
+    font-size: 14px;
+    width: 720px;
+}
+.speculeheading{
+border-bottom: 1px solid #e5e3e3;
+margin-left: -16px;
+padding: 10px 1px 10px 15px;
+}
+.specification{
+    color:#555;
+    margin-top: 30px;
+}
+.general{
+    font-size: 14px;
+}
+.brand{
+    display: flex;
+}
+.Author{
+    margin-left: 100px;
+}
+.language{
+    margin-left: 79px;
+}
+.inkprop{
+    display: flex;
+}
+.genre{
+    margin-left: 105px;
+}
+.ISBN{
+    margin-left: 109px;
+}
+.Pages{
+    margin-left: 100px;
+}
+.publishYear{
+    margin-left: 64px;
+}

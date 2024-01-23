@@ -1,0 +1,104 @@
+<app-header1></app-header1>
+
+<body>
+
+    <div *ngFor="let item of stationery" class="itemslistcontiner">
+        
+        <div class="imgcontner">
+            <div class="itemcontiner1">
+                <img src="{{item.Image}}" alt="Los Angeles" class="d-block" style="width:100%" height="250px">
+                <!-- <img src="../../assets/trimmer.webp" alt="Los Angeles" class="d-block" style="width:100%"
+                    height="250px"> -->
+
+            </div>
+            <div class="mainactions">
+                <button type="button" routerLink="" class=" addtocart actions btn btn-primary">ADD TO CART</button>
+                <button type="button" (click)="sendinfo()" class="buynow actions btn btn-primary"> BUY
+                    NOW</button>
+            </div>
+        </div>
+        <div class="infocontainer">
+            <div class="sharecontainer">
+                <div class="path">
+                    <button routerLink="" class="pathbtn" type="button">homepage1></button><button routerLink="page2"
+                        class="pathbtn" type="button">homepage2></button><button class="pathbtn"
+                        type="button">Stationery</button>
+                </div>
+                <div class="share" routerLink=""><em class="fa-solid fa-share"
+                        style="color: #2f7af4;font-size:22px ;"></em>Share</div>
+            </div>
+            <div class="itemname">
+                <p><strong>{{item.Name}}</strong></p>
+
+            </div>
+            <p class="specialprice">Special Price</p>
+            <div class="pricecont">
+                <h3>{{item.Price|currency:"INR"}}</h3><del class="oldprice">{{item.pricediscount|currency:"INR"}}</del> <span class="discountprice">21% Off</span>
+            </div>
+            <div class="deliverycontainer">
+                <div class="lightheading">Deliver</div>
+                <div class="delivedetails">
+
+                    <em class="fa-solid fa-location-dot dot"></em>
+                    <input type="text" name="pincode" placeholder="Enter delivery Pincode" maxlength="6" minlength="6" id="pin" class="pincode">
+                    <button type="button" class="btn mat-button check">Check</button>
+                </div>
+            </div>
+            <div class="pinverify">
+                Delivery by {{ futureDate | date }}
+            </div>
+            <div class="seller">
+                <p class="lightheading">Seller</p>
+                <p class="details">{{item.Seller}}</p>
+            </div>
+            <div class="description">
+                <p class="lightheading">Description:</p>
+                <div class="descriptioninfo">
+                    
+                    {{item.Description}}
+                </div>
+            </div>
+            <div class="specule">
+                <h3 class="speculeheading">Specification</h3>
+                <div class="general">
+                    <p class="specification"><strong>General</strong></p>
+                    
+                    <div class="inkprop">
+                        <p class="lightheading">Pack</p>
+                        <p class="productpack">{{item.Pack}}</p>
+                    </div>
+                    <div class="pencolors inkprop">
+                        <p class="lightheading">Type</p>
+                        <p class="prodtype">{{item.Type}}</p>
+                    </div>
+                    
+                    <div class="owner inkprop">
+                        <p class="lightheading">NetQuantity</p>
+                        <p class="netquantity">{{item.NetQuantity}}</p>
+                    </div>
+                    <div class="owner inkprop">
+                        <p class="lightheading">IdealFor</p>
+                        <p class="IdealFor">{{item.IdealFor}}</p>
+                    </div>
+                    <div class="owner inkprop">
+                        <p class="lightheading">Origin</p>
+                        <p class="origin">{{item.Origin}}</p>
+                    </div>
+                    <div class="warranty inkprop">
+                        <p class="lightheading">ExpireDate</p>
+                        <p class="experidate">{{item.ExpireDate}}</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+

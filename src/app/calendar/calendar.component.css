@@ -1,0 +1,126 @@
+*{
+    /* background-color:#ebf0f6; */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 9em;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    box-shadow: 2px 2px 2px 1px rgb(190, 189, 189);
+}
+
+.job {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logo1 {
+    font-size: 15px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    padding: 9px 5px 3px 8px;
+    border: 2px solid orangered;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+span {
+    color: orangered;
+}
+
+.title{
+    box-sizing: border-box;
+    padding-left: 30%;
+    padding-top: 10px;
+}
+
+.interviewSheduleData{
+    margin-top: 5em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding-top: 30px;
+}
+
+.interviewSheduleData h4{
+    line-height: 0;
+}
+
+#title,#date,#name,#startTime,#endTime{
+    width: 400px;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+#button{
+    width: 420px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    /* border: 1px solid black; */
+    font-size: 20px;
+    background-color: rgb(64, 64, 223);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+#button:hover{
+    letter-spacing: 2px;
+    background-color: rgb(55,136,216);
+}
+h4{
+    margin-top: 10px;
+}
+.calendar{
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px rgb(208, 205, 205);
+    padding: 25px;
+    border-radius: 10px;
+}
+full-calendar{
+    height: 500px;
+}
+
+.left{
+    width: 12.5%;
+}
+.right{
+    width: 12.5%;
+}
+.footer{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.footer_content{
+    width:75%;
+}
+
+.pageNavigation{
+    border: none;
+    background-color: transparent;
+}

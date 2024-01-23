@@ -1,0 +1,461 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* *{
+    font-size: 14px;
+} */
+app-header1{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0;
+    z-index: 1;
+}
+.maincontainer{
+    width:100%;
+    height:1200px;
+    display: flex;
+    box-sizing: border-box;
+    background-color: rgb(241, 242, 244);
+    position:relative;
+    margin: 80px 0px 0px 0px;
+    padding-left: 50px;
+
+}
+.subonecontainer{
+    width:65%;
+    height:900px;
+    padding-top: 10px;
+}
+.loginoption{
+    display: flex;
+    background-color: #fff;
+    height:95px;
+    max-width: 950px;
+    margin:15px 10px 10px 50px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.numcontainer{
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    margin: 20px 1px 1px 35px;
+    background-color: rgb(241, 242, 244);
+    padding-left: 5px;
+    padding-top: 0px;
+    color: #2874f0;
+}
+.name{
+    margin-left: 50px;
+    width:470px;
+}
+.nameandmob{
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    width:290px;
+    
+}
+.namealign{
+    display: flex;
+    margin-top: 17px;
+    height:27px;
+}
+.right{
+    margin-left: 30px;
+    color:#2874f0;
+}
+.mob{
+    color:#777;
+}
+.change{
+    color:#2874f0;
+    margin: 32px 20px 1px 0px;
+    border: 1px solid #2874f0;
+}
+.deliveryaddress{
+    display: flex;
+    background-color: #fff;
+    height:120px;
+    max-width: 950px;
+    margin:15px 10px 10px 50px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.address{
+    margin-left: 50px;
+    width:470px;
+}
+.addd{
+    color:#2874f0;
+    margin: 32px 20px 1px 0px;
+    border: 1px solid #2874f0;
+}
+.ordersummary{
+    
+    height:auto;
+    max-width:950px;
+    margin:15px 10px 10px 50px;
+   
+}
+.subordersummary{
+    background-color: #fff;
+    height:auto;
+    box-shadow: 1px 2px 7px -4px;
+}
+.ord{
+    margin:10px 1px 1px 35px;
+}
+.adress{
+    width:350px;
+}
+.ordername{
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #2874f0;
+}
+.ordersum{
+    margin:10px 1px 1px 50px;
+    color:#ffffff;
+}
+.orderinformation{
+display: flex;
+height:auto;
+padding-top: 15px;
+}
+.image{
+    margin:1px 1px 1px 30px;
+}
+.orderiteminfo{
+    margin:1px 1px 1px 30px;
+    width:400px;
+    height: auto;
+    color: rgb(191, 189, 189);
+}
+.prodname{
+    color:#555;
+    height:auto;
+}
+.prodspec{
+    margin-top: -10px;
+    color:#777;
+}
+.prodprice{
+    display: flex;
+    width:250px;
+    justify-content: space-between;
+    align-items: baseline;
+    height:auto;
+}
+.adding{
+    display: flex;
+    height:auto;
+    margin: 20px 0px 0px 105px;
+}
+.btn-default{
+    width: 25px;
+    height: 25px;
+    padding: 0px 1px 6px 1px;
+    font-size: 16px;
+    border-radius: 50%;
+    border:1px solid #555;
+}
+.currentnum{
+    width: 36px;
+    height: 25px;
+    margin: 0px 20px 1px 20px;
+    border:1px solid #777;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+}
+.emailinfocontainer{
+    display:flex;
+    background-color: #fff;
+    height:60px;
+    max-width: 950px;
+    justify-content: space-between;
+    padding:21px 62px 0px 30px;
+    margin:20px 0px 0px 0px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.continu{
+    margin-top: -10px;
+    height:40px;
+}
+.ordersummaryshow{
+    background-color: #fff;
+    display: flex;
+    height: 100px;
+    max-width: 950px;
+    margin: 15px 10px 10px 50px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.back{
+    margin: -7px 0px 13px 196px;
+    width: 108px;
+    color:#2874f0;
+    border: 1px solid #2874f0;
+}
+.back1{
+    margin: -7px 0px 13px 20px;
+    width: 108px;
+    color:#2874f0;
+    /* margin: 32px 20px 1px 0px; */
+    border: 1px solid #2874f0;
+}
+.deliverdate{
+    margin:0px 0px 0px 0px;
+}
+.paymentpage{
+    background-color: #fff;
+    display: flex;
+    height: 60px;
+    max-width: 950px;
+    margin: 20px 10px 10px 50px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.paymentmainpage{
+    background-color: #fff;
+    height:460px;
+    max-width:950px;
+    margin:15px 10px 10px 50px;
+    box-shadow: 1px 2px 7px -4px;
+}
+.itemadding{
+    width: 290px;
+    height: 230px;
+    background-color: #ffffff;
+    margin: 25px 1px 1px 18px;
+    box-shadow: 1px 2px 7px -4px;
+    position: fixed;
+}
+.pricehead{
+    padding:10px 0px 0px 20px;
+    color:#777;
+    border-bottom:1px solid #e1e1e1;
+}
+.pricedetails{
+    width:100%;
+    justify-content: space-between;
+    display:flex;
+    
+}
+/* .subtwocontainer{
+    position: fixed;
+    right: 90px;
+    top: 80px;
+} */
+.pricdetails{
+    padding:0px 20px 0px 20px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.totalamount{
+    justify-content: space-between;
+    display:flex;
+    width:100%;
+    padding:10px 20px 0px 20px;
+}
+.upi{
+    display: flex;
+}
+.yui{
+    display: flex;
+    border:1px solid #2874f0;
+    width:235px;
+    padding:6px;
+    margin: 0px 0px 0px 30px;
+}
+.epitext{
+    border:none;
+}
+.epitext:focus{
+outline: none;
+}
+#upi{
+    margin: 20px 0px 0px 40px;
+    font-size: 14px;
+}
+.upiname{
+    margin: 20px 0px 0px 50px;
+}
+.chooseupi{
+    margin:10px 0px 0px 103px;
+    font-size: 14px;
+}
+.continnut{
+    background-color:#2874f0;
+    color:#fff;
+    margin: 5px 0px 5px 27px;
+    font-size: 16px;
+}
+.copid2{
+    margin-top: -20px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.copid1{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+.verify{
+    margin:0px 0px 0px 0px;
+    color:#2874f0;
+    border:none;
+    background-color: #fff;
+}
+.yui1{
+    display: flex;
+}
+.pae{
+    margin-left: 10px;
+}
+.freedelivery{
+    color:green;
+    padding:0px 20px 0px 20px;
+    border-top: 1px solid #e1e1e1;
+}
+.atmno:focus{
+outline: 1px solid #2874f0;
+}
+.atmno{
+    width:248px;
+    padding-left: 10px;
+    height:28px;
+    border:none;
+}
+.atmnocontainer{
+    width:250px;
+    height:30px;
+    padding: 0px 0px 0px 0px;
+    border:1px solid #e1e1e1;
+}
+.expirecontainer{
+    display:flex;
+}
+.experidate{
+    display:flex;
+    width:165px;
+    height:30px;
+    border:1px solid #e1e1e1;
+    margin: 5px 0px 0px 0px;
+    padding: 2px 0px 0px 4px;
+}
+.experidate:hover{
+    border:1px solid #2874f0;
+}
+.month{
+    border:none;
+    margin:0px 0px 0px 12px;
+}
+.year{
+    border:none;
+    margin-left: 9px;
+}
+.year:focus{
+    outline:1px solid #2874f0;
+}
+.month:focus{
+    outline:1px solid #2874f0;
+}
+.validthru{
+    font-size: 12px;
+    padding-top: 4px;
+}
+.cvv{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #e1e1e1;
+    margin: 4px 0px 0px 5px;
+    padding-left: 4px;
+}
+.cvvnum{
+    width:73px;
+    height:27px;
+    border:none;
+}
+.cvvnum:focus{
+    outline:none;
+}
+.cardpay{
+    margin: 6px 0px 0px 0px;
+    width: auto;
+}
+.cardguid{
+    margin:0px 0px 0px 104px;
+    color:#777;
+}
+.nb{
+    margin-top: -20px;
+}
+.cards{
+    margin-top: 15px;
+}
+.allbanks{
+    color:#777;
+}
+.choosebank{
+    margin:10px 0px 0px 103px;
+    font-size: 14px;
+}
+.ntbankingpay{
+    width:auto;
+    margin:10px 0px 0px 0px;
+}
+.cashondelguidelines{
+    background-color: #fef7e9;
+    padding:5px;
+}
+.captacontainer{
+    display: flex;
+}
+.capta{
+    width: 150px;
+    height: 45px;
+    position:relative;
+    border:1px solid #e1e1e1;
+    margin:10px 0px 0px 0px;
+}
+.captabtn{
+    background-color: #fff;
+    border:none;
+}
+.otp{
+    color: green;
+    font-size: 30px;
+    margin: 0px 0px 0px 13px;
+}
+.fa-rotate-right{
+    font-size: 30px;
+    top:8px;
+    right:3px;
+    position: absolute;
+}
+.otpcapta{
+    width: 120px;
+    height: 45px;
+    border:1px solid #e1e1e1;
+    margin:10px 0px 0px 20px;
+}
+
+.otpinput{
+    width: 118px;
+    height: 43px;
+    padding-left: 15px;
+    border:none;
+}
+.otpcapta:hover{
+    border:1px solid #2874f0;
+}
+.otpinput:focus{
+outline:none;
+}
+.cashondelbuttn{
+    width: 145px;
+    height: 43px;
+    margin:10px 0px 0px 20px;
+}

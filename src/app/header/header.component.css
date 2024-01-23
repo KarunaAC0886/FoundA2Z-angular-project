@@ -1,0 +1,132 @@
+.dialog-container{
+    display:flex;
+    width:100%;
+    /* margin:20px 0px 0px 0px; */
+    height:450px;
+}
+.logincontainer{
+  display:flex;
+  width:100%;
+  /* margin:20px 0px 0px 0px; */
+  height:450px;
+}
+.subcontainer1{
+    width:40%;
+    background-color: #2874f0;
+    padding-top: 50px;
+}
+.subcontainer2{
+    width:60%;
+    background-color: #fff;
+    padding: 61px 0px 0px 95px;
+}
+.loginheadng{
+    margin: 30px 0px 0px 25px;
+    color: white;
+}
+.logininntro{
+    font-size: 14px;
+    color:#fff;
+    margin:-5px 0px 0px 28px;
+}
+.loginorder{
+    font-size: 14px;
+    color:#fff;
+    margin: 20px 0px 0px 28px;
+}
+mat-form-field{
+    margin:20px 0px 0px 50px;
+    background-color: #fff;
+    width: 200px;
+}
+.mntxt{
+    margin-top: -15px;
+    border:none;
+    width:290px;
+    border-bottom: 1px solid #777;
+}
+.mntxt:focus{
+    outline:none;
+    border-bottom: 2px solid #2874f0;
+}
+.mncontnr{
+    margin:20px 0px 0px 50px;
+    
+}
+.mn{
+    padding:0px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+mat-dialog-actions{
+    background-color: #2874f0;
+}
+.loginsub{
+    margin: 30px 0px 0px 43px;
+    width: 290px;
+}
+.newtofndaz{
+    margin: 90px 0px 0px 55px;
+    border:none;
+    background-color: #fff;
+    color: #2874f0;
+}
+.content{
+    margin:35px 0px 0px 110px;
+}
+.otp-input-wrapper {
+    width: 240px;
+    margin-left: 85px;
+    text-align: left;
+    display: inline-block;
+  }
+  .otp-input-wrapper input {
+  padding: 0;
+  width: 264px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #3e3e3e;
+  background-color: transparent;
+  border: 0;
+  margin-left: 2px;
+  letter-spacing: 30px;
+  font-family: sans-serif !important;
+  }
+  .otp-input-wrapper input:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .otp-input-wrapper svg {
+    position: relative;
+    display: block;
+    width: 240px;
+    height: 2px;
+  }
+  svg:focus{
+border:2px solid #2874f0;
+  }
+  .change{
+    border:none;
+    margin-left: 20px;
+    color:#2874f0;
+    background-color: #fff;
+  }
+  .mobilevalidalrt{
+    margin-left: 30px;
+    margin-top: 5px;
+    color:red;
+  }
+  .verify{
+    width:250px;
+    margin:50px 0px 0px 80px;
+  }
+  .endtime{
+    margin:15px 0px 0px 87px;
+  }
+  .resend{
+    margin: 15px 0px 0px 135px;
+  }

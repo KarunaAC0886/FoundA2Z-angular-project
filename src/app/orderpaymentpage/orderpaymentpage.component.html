@@ -1,0 +1,311 @@
+<app-header1></app-header1>
+
+<body>
+    <div class="maincontainer">
+        <div class="subonecontainer">
+            <div class="loginoption">
+                <div class="num">
+                    <div class="numcontainer">
+                        1
+                    </div>
+                </div>
+                <div class="name">
+                    <div class="namealign">
+                        <p><strong style="color:#777">LOGIN</strong></p>
+                        <div><em class="fa-solid fa-check right"></em></div>
+                    </div>
+                    <div class="nameandmob">
+                        <p>{{customername}}</p>
+                        <p class="mob">+91 9972384946</p>
+                    </div>
+                </div>
+                <div class="submitbtn">
+                    <button type="button" class="btn change">Change</button>
+                </div>
+            </div>
+            <div class="deliveryaddress">
+                <div class="num">
+                    <div class="numcontainer">
+                        2
+                    </div>
+                </div>
+                <div class="address">
+                    <div class="namealign">
+                        <p><strong style="color:#777">DELIVERY ADDRESS</strong></p>
+                        <div><em class="fa-solid fa-check right"></em></div>
+                    </div>
+                    <div class="adress">
+                        <p>Pedda nagurlu village Polanayakanahalli post Bagepalli taluk Chikkaballapur Dist</p>
+                    </div>
+                </div>
+                <div class="submitbtn">
+                    <button type="button" class="btn addd">Change</button>
+                </div>
+            </div>
+            <div *ngIf="ordersummary"  class="ordersummary">
+                <div class="subordersummary" >
+                    <div class="ordername">
+                        <div class="numcontainer ord">
+                            3
+                        </div>
+                        <div class="ordersum">
+                            <strong>ORDER SUMMARY</strong>
+                        </div>
+                    </div>
+                    <div class="orderinformation" *ngFor="let data of iteminfo">
+                        <div class="image">
+                            <img src="{{data.Image}}" alt="trimmer" width="100px" height="100px">
+                        </div>
+                        <div class="orderiteminfo">
+                            <p class="prodname"><strong>{{data.Name}}</strong>
+                            </p>
+                            <p class=" prodspec"><span>{{data.Package}}</span>&nbsp;&nbsp;&nbsp;<span>{{data.Type}}</span>
+                            </p>
+                            <p style="color:#777;font-size: 16px;margin-top: -10px;">Seller:&nbsp;&nbsp;{{data.Seller}}{{data.Publisher}}</p>
+                            <div class="prodprice">
+                                <div style="color:#777"><del>{{data.Pricediscount}}</del></div>&nbsp;&nbsp;
+                                <div>
+                                    <h3 style="color:#555">{{data.Price| currency:"INR"}}</h3>
+                                </div>
+                                &nbsp;&nbsp;
+                                <div style="color:green">10% Off</div>
+                            </div>
+                        </div>
+                        <div class="deliverdate">
+                            <input type="radio" name="deliver" id="deliver">&nbsp;&nbsp;
+                            <label for="deliver"> Delivered By {{deliverydate| date}}</label>
+                        </div>
+                    </div>
+                    <div class="adding">
+                        <button type="button" class="btn btn-default" [disabled]="currentnumber==1"
+                            (click)="decrease()">-</button>
+                        <button class="currentnum" (change)="myvaluechange()">{{currentnumber}}</button>
+                        <button type="button" class="btn btn-default" (click)="increase()">+</button>
+                        <div class="backbtn">
+                            <button type="button" (click)="cancel()" class="btn  back">Cancel</button>
+                            <button type="button" (click)="buymore()" class="btn  back1">Buy More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="emailinfocontainer">
+                    <p>Order information will be sent to <strong>karunkarun395@gmail.com</strong></p>
+                    <button type="button" class="btn btn-primary continu" (click)="hide()">CONTINUE</button>
+                </div>
+            </div>
+            <div *ngIf="showcontainer" class="ordersummaryshow">
+                <div class="num">
+                    <div class="numcontainer">
+                        3
+                    </div>
+                </div>
+                <div class="name">
+                    <div class="namealign">
+                        <p><strong style="color:#777">ORDER SUMMARY</strong></p>
+                        <div><em class="fa-solid fa-check right"></em></div>
+                    </div>
+                    <div class="nameandmob">
+                        <p>{{currentnumber}} Item</p>
+                        <!-- <p class="mob">+91 9972384946</p> -->
+                    </div>
+                </div>
+                <div class="submitbtn">
+                    <button type="button" class="btn change" (click)="hideprevious()">Change</button>
+                </div>
+            </div>
+            <div *ngIf="paymentpagebefore" class="paymentpage">
+                <div class="num">
+                    <div class="numcontainer">
+                        4
+                    </div>
+                </div>
+                <div class="name">
+                    <div class="namealign">
+                        <p><strong style="color:#777">PAYMENT OPTIONS</strong></p>
+                        <!-- <div><em class="fa-solid fa-check right"></em></div>                         -->
+                    </div>
+                    <!-- <div class="nameandmob">
+                        <p>1 Item</p>
+                        <p class="mob">+91 9972384946</p>
+                    </div> -->
+                </div>
+                <!-- <div class="submitbtn">
+                    <button type="button" class="btn change" (click)="hideprevious()">Change</button>
+                </div> -->
+            </div>
+            <div *ngIf="paymentmakingpage" class="paymentmainpage">
+                <div class="ordername">
+                    <div class="numcontainer ord">
+                        4
+                    </div>
+                    <div class="ordersum">
+                        <strong>PAYMENT OPTIONS</strong>
+                    </div>
+                </div>
+                <div class="paymentoptions">
+                    <div class="upi">
+                        <input (click)="upi()" type="radio" name="upi" id="upi">
+                        <label class="upiname" for="upi"><strong>UPI</strong></label>
+                    </div>
+                    <div *ngIf="chooseupi" class="chooseupi">
+                        <p>Choose an option</p>
+                        <div class="copid1">
+                            <input (click)="phonepay()" type="radio" name="radio" id="choption">
+                            <label for="choption">Phonepe</label>
+                        </div>
+                        <div *ngIf="phonepecont">
+                            <button class="btn continnut" type="button">Pay </button>
+                        </div><br>
+                        <div class="copid2">
+                            <input (click)="upigoogle()" type="radio" name="radio" id="choption">
+                            <label for="choption2">Your UPI Id</label><br>
+                        </div>
+                        <div *ngIf="enterupiid" class="yui1">
+                            <div class="yui">
+                                <input class="epitext" type="text" name="upiid" id="upid" placeholder="Enter UPI Id">
+                                <button type="button" class="verify">VERIFY</button>
+
+                            </div>
+                            <button type="button" class="btn btn-primary pae">Pay </button>
+                        </div>
+
+                    </div>
+                    <div class="cards">
+                        <div class="upi">
+                            <input (click)="cards()" type="radio" name="upi" id="upi">
+                            <label class="upiname" for="upi"><strong>Debit/ Credit/ ATM Card</strong></label>
+                        </div>
+                        <div *ngIf="choosecards" class="chooseupi">
+                            <div class="atmnocontainer">
+                                <input class="atmno" type="tel" maxlength="12" name="atm" placeholder="Enter card number" id="atm">
+                            </div>
+                            <div class="expirecontainer">
+                                <div class="experidate">
+                                    <span class="validthru">Valid thru</span>
+                                    <select class="month" name="Month">
+                                        <option value="">MM</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <select class="year" name="year" id="year">
+                                        <option value="">YY</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                    </select>
+                                </div>
+                                <div class="cvv">
+                                    <input class="cvvnum" type="tel" maxlength="3" placeholder="CVV" name="cvv" id="cvv">
+                                </div>
+                            </div>
+                            <button type="button" class="cardpay btn btn-primary"> Pay </button>
+                            
+                        </div>
+                        <div class="cardguid">
+                            <p>Add and secure your card as per RBI Guidelines</p>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="nb">
+                        <input (click)="netbnk()" type="radio" name="upi" id="upi">
+                        <label class="upiname" for="upi"><strong>Net Banking</strong></label>
+                    </div> 
+                    <div *ngIf="choosenetbanking" class="choosebank">
+                        <label class="allbanks" for="bank"><strong>All Bank</strong></label><br>
+                        <select name="bank" id="bank">
+                            <option value="">--Select Bank--</option>
+                            <option value="Axis Bank">Axis Bank</option>
+                            <option value="Bank of Baroda">Bank of Baroda</option>
+                            <option value="Bank of India">Bank of India</option>
+                            <option value="Bank of Maharathra">bank of Maharashtra</option>
+                            <option value="Canara Bank">Canara Bank</option>
+                            <option value="HDFC Bank">HDFC Bank</option>
+                            <option value="IDBI Bank">IDBI Bank</option>
+                            <option value="Indus Ind">Indus Ind</option>
+                            <option value="Karnataka Bank">Karnataka Bank</option>
+                            <option value="">State Bank of India</option>
+                            <option value="Union Bank">Union Bank</option>
+                            <option value="Yes Bank">Yes Bank</option>
+                        </select><br>
+                        
+                        <button type="button" class="btn btn-primary ntbankingpay">Pay </button>
+                    </div> 
+                    <div class="cardguid">
+                        <p>This Instrument has low success, use UPI or Cards for better experience</p>
+                    </div>
+                    <div class="nb">
+                        <input (click)="cashondelivery()" type="radio" name="upi" id="upi">
+                        <label class="upiname" for="upi"><strong>Cash on Delivery</strong></label>
+                    </div>
+                    <div *ngIf="choosecashondelivery" class="choosebank">
+                        <div class="cashondelguidelines">
+                            Due to handling costs and nominal fee of RS 5 will be charged for order placed using this. <br> avoid this option by paying online. 
+                        </div>
+                        <div class="captacontainer">
+                            <div class="capta">
+                               <span class="otp">{{otp}}</span>  <button type="button" class="captabtn" (click)="genereateotp()"><em class="fa-solid fa-rotate-right"></em></button>
+                            </div>
+                            <div class="otpcapta">
+                                <input type="tel" maxlength="3" class="otpinput" [(ngModel)]="entercapta" placeholder="Enter capta" id="otpnum">
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary cashondelbuttn" (click)="codprocess()">CONTINUE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                
+            </div>
+
+        </div>
+        <div class="subtwocontainer">
+            <div class="itemadding">
+                <p class="pricehead"><strong>PRICE DETAILS</strong></p>
+                <div class="pricdetails">
+                    <div class="pricedetails">
+                        <p class="price">Price({{currentnumber}} Item)</p>
+                        <p>{{priceofitems| currency:"INR"}}</p>
+                    </div>
+                    <div class="pricedetails">
+                        <p class="price">Delivery Charges</p>
+                        <p>{{deliverycharges| currency:"INR"}}</p>
+                    </div>
+                </div>
+                <div class="totalamount">
+                    <p>Total Amount</p>
+                    <p>{{totalamount| currency:"INR" }}</p>
+                </div>
+                <div class="freedelivery">
+                    <p>Delivery charges will be free when product price is above RS 500</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>

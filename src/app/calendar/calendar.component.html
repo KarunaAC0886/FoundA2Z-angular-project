@@ -1,0 +1,19 @@
+        <div><input type="text" name="name" id="name" [(ngModel)]="body.Name" placeholder="Enter candidate name"><br><br>
+        <h4>Title:</h4>
+        <input type="text" name="title" id="title" [(ngModel)]="body.Title" placeholder="Enter title here"><br><br>
+
+        <h4>Start Time:</h4>
+        <input type="time" name="time" id="startTime" [(ngModel)]="body.StartTime"><br><br>
+        <h4>End Time:</h4>
+        <input type="time" name="time" id="endTime" [(ngModel)]="body.EndTime"><br><br>
+        <h4>Date:</h4>
+        <input type="date" name="date" id="date" [(ngModel)]="body.Date"><br><br>
+        <button id="button" (click)="btnSubmit()">Submit</button></div>
+        
+        
+        <div class="calendar" *ngIf="try">
+            <full-calendar  [options]="calendarOptions" [events]="[
+    { title:body.Title , date:body.Date,Starttime:body.StartTime,Endtime:body.EndTime, btnSubmit}
+    ]"></full-calendar>
+    
+        </div>

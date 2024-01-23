@@ -1,0 +1,124 @@
+<div class="dialog-container">
+    <div class="logincontainer">
+        <div class="subcontainer1">
+            <h2 class="loginheadng">Login</h2>
+            <label class="logininntro loginorder">Get access to your Orders,</label>
+            <label class="logininntro">Wishlist and Recommendations</label>
+
+        </div>
+        <div class="subcontainer2">
+
+            <div *ngIf="loginbox" class="loginbox">
+                <form (formGroup)="loginForm">
+                    <div class="mncontnr">
+                        <label class="mn" for="mn">Mobile Number</label><br>
+                        <input class="mntxt" type="number" id="mn" maxlength="10" minlength="10"
+                            formControlName="mobilenumber">
+                    </div>
+                    <div *ngIf="loginForm.get('mobilenumber')?.touched">
+                        Mobile number is Required
+                    </div>
+                    <div class="mobilevalidalrt"
+                        *ngIf="loginForm.get('mobilenumber')?.touched && loginForm.get('mobilenumber')?.dirty">
+
+                        <div
+                            *ngIf="loginForm?.get('mobilenumber')?.hasError('maxlength')||loginForm?.get('mobilenumber')?.hasError('minlength')">
+                            Mobile number is 10 digits only
+                        </div>
+                    </div>
+
+
+                    <div mat-dialog-actions>
+
+                        <button type="submit" class="btn btn-primary loginsub" (click)="openDialog2()">Request
+                            OTP</button>
+                    </div>
+
+                    <button class="newtofndaz" (click)="gotoregisterpage()">New to FoundA2Z ? Create an Account</button>
+                </form>
+            </div>
+            <div *ngIf="loginotppage" class="otppage">
+                <div class="content">
+                    <label>Please enter OTP sent to</label><br>
+                    <label>9972384946.</label><button type="button" class="change" (click)="change()">Change</button>
+                </div>
+                <div class="otp-input-wrapper">
+                    <input type="text" maxlength="6" pattern="[0-9]*" autocomplete="off">
+                    <svg viewBox="0 0 240 1" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="0" x2="240" y2="0" stroke="#3e3e3e" stroke-width="3"
+                            stroke-dasharray="20,22" />
+                    </svg>
+
+                </div><br>
+                <label class="endtime">{{timer}}</label><button type="button" class="change resend">Resend</button>
+
+                <button type="button" class=" btn btn-primary verify" mat-dialog-close
+                    (click)="verify()">Verify</button>
+
+            </div>
+
+        </div>
+    </div>
+    <div *ngIf="registercomponent" class="registercontainer">
+        <div class="subcontainer1">
+            <h2 class="loginheadng">Login</h2>
+            <label class="logininntro loginorder">Get access to your Orders,</label>
+            <label class="logininntro">Wishlist and Recommendations</label>
+
+        </div>
+        <div class="subcontainer2">
+
+            <div *ngIf="loginbox" class="loginbox">
+                <form (formGroup)="loginForm">
+                    <div class="mncontnr">
+                        <label class="mn" for="mn">Mobile Number</label><br>
+                        <input class="mntxt" type="number" id="mn" maxlength="10" minlength="10"
+                            formControlName="mobilenumber">
+
+                        <div *ngIf="loginForm.get('mobilenumber')?.touched">
+                            Mobile number is Required
+                        </div>
+                        <div class="mobilevalidalrt"
+                            *ngIf="loginForm.get('mobilenumber')?.touched && loginForm.get('mobilenumber')?.dirty">
+
+                            <div
+                                *ngIf="loginForm?.get('mobilenumber')?.hasError('maxlength')||loginForm?.get('mobilenumber')?.hasError('minlength')">
+                                Mobile number is 10 digits only
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div mat-dialog-actions>
+
+                        <button type="submit" class="btn btn-primary loginsub" (click)="openDialog2()">Request
+                            OTP</button>
+                    </div>
+
+                    <button class="newtofndaz">
+                        New to FoundA2Z ? Create an Account</button>
+                </form>
+            </div>
+            <div *ngIf="loginotppage" class="otppage">
+                <div class="content">
+                    <label>Please enter OTP sent to</label><br>
+                    <label>9972384946.</label><button type="button" class="change" (click)="change()">Change</button>
+                </div>
+                <div class="otp-input-wrapper">
+                    <input type="text" maxlength="6" pattern="[0-9]*" autocomplete="off">
+                    <svg viewBox="0 0 240 1" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="0" x2="240" y2="0" stroke="#3e3e3e" stroke-width="3"
+                            stroke-dasharray="20,22" />
+                    </svg>
+
+                </div><br>
+                <label class="endtime">{{timer}}</label><button type="button" class="change resend">Resend</button>
+
+                <button type="button" class=" btn btn-primary verify" mat-dialog-close
+                    (click)="verify()">Verify</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
